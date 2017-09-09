@@ -9,7 +9,7 @@
 CC = gcc
 
 # define any compile-time flags
-CFLAGS = -Wall -g
+CFLAGS = -Wall 
 
 # define any directories containing header files other than /usr/include
 #
@@ -50,7 +50,7 @@ MAIN = myexec
 .PHONY: depend clean
 
 all:    $(MAIN)
-	@echo  Compiling completed!
+	@echo  Compilation completed!
 
 $(MAIN): $(OBJS)
 	$(CC) $(CFLAGS) $(INCLUDES) -o $(MAIN) $(OBJS) $(LFLAGS) $(LIBS)
